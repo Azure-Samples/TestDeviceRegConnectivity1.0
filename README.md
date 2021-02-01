@@ -1,57 +1,51 @@
-# Project Name
+# Test Device Registration Connectivity
+Test-DeviceRegConnectivity PowerShell script helps to test the Internet connectivity to the following Microsoft resources under the system context to validate the connection status between the device that needs to be connected to Azure AD as hybrid Azure AD joined device and Microsoft resources that are used during device registration process. It also, checks for SSL/TLS handshake and report as failure if any.
 
-(short, 1-3 sentenced, description of the project)
+  - https://login.microsoftonline.com
+  - https://device.login.microsoftonline.com
+  - https://enterpriseregistration.windows.net
+ 
+ 
 
-## Features
-
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+#### Why is this script helpful?
+  - You don’t need to rely on PS Exec tool to test the Internet connectivity under the system context, you need just to run it as administrator.
+  - You don’t need to collect network trace during device registration and analyze it to verify the Internet connectivity.
+  - You don’t need to check the Internet gateway (web proxy or firewall) to verify the Internet connectivity.
 
 
-## Demo
+> [!NOTE]
+> Using this script, Internet connectivity troubleshooting time will be reduced, and you need just to run it as administrator.
 
-A demo app is included to show how to use the project.
+#### User experience:
 
-To run the demo, follow these steps:
+- When the test passes successfully: 
 
-(Add steps to start up the demo)
+![TestPass](https://github.com/mzmaili/TestDeviceRegConnectivity/blob/master/pass.png)
 
-1.
-2.
-3.
+- When the test fails:: 
 
-## Resources
+![TestFail1](https://github.com/mzmaili/TestDeviceRegConnectivity/blob/master/f1.png)
 
-(Any additional resources or related projects)
+![TestFail2](https://github.com/mzmaili/TestDeviceRegConnectivity/blob/master/f3.png)
 
-- Link to supporting information
-- Link to similar sample
-- ...
+> [!NOTE]
+> You can use [DSRegTool](https://github.com/mzmaili/DSRegTool) which is a comprehensive tool that performs more than 30 different tests that help you to identify and fix the most common device registration issues for all join types.
+
+```azurepowershell
+.SYNOPSIS 
+    Test-HybridDevicesInternetConnectivity V2.1 PowerShell script. 
+ 
+.DESCRIPTION 
+    Test-HybridDevicesInternetConnectivity is a PowerShell script that helps to test the Internet connectivity to the following Microsoft resources under the system context to validate the connection status between the device that needs to be connected to Azure AD as hybrid Azure AD joined device and Microsoft resources that are used during device registration process: 
+ 
+    https://login.microsoftonline.com 
+    https://device.login.microsoftonline.com 
+    https://enterpriseregistration.windows.net 
+ 
+ 
+.AUTHOR: 
+    Mohammad Zmaili 
+ 
+.EXAMPLE 
+    .\Test-DeviceRegConnectivity
+```
