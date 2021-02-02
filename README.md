@@ -5,7 +5,7 @@ Test-DeviceRegConnectivity PowerShell script helps to test the Internet connecti
   - https://device.login.microsoftonline.com
   - https://enterpriseregistration.windows.net
  
-## Why is this script helpful?
+## Why is this script helpful
 
   - You don’t need to rely on PS Exec tool to test the Internet connectivity under the system context, you need just to run it as administrator.
   - You don’t need to collect network trace during device registration and analyze it to verify the Internet connectivity.
