@@ -18,7 +18,7 @@ Test-DeviceRegConnectivity PowerShell script helps to test the Internet connecti
 
 Download and run the `Test-DeviceRegConnectivity.ps1` script from this GitHub repo. 
 
-## User experience:
+## User experience
 
 - When the test passes successfully: 
 
