@@ -29,11 +29,11 @@ Download and run the `Test-DeviceRegConnectivity.ps1` script from this GitHub re
 
 ## User experience
 
-- When the test passes successfully: 
+- When the test passes successfully
 
 ![TestPass](https://github.com/Azure-Samples/TestDeviceRegConnectivity/blob/main/media/pass.png)
 
-- When the test fails:
+- When the test fails
 
 ![TestFail1](https://github.com/Azure-Samples/TestDeviceRegConnectivity/blob/main/media/f1.png)
 
